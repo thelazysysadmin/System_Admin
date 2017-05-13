@@ -83,8 +83,6 @@ class SimpleArchiver:
 			os.remove(file)
 			print("DELETING {0}...".format(file))
 
-	def testmethod(self):
-		pass
 
 
 simpleArchiver = SimpleArchiver()
@@ -93,6 +91,6 @@ if os.path.isfile(simpleArchiver.setup(sys.argv)):
 			simpleArchiver.compress()
 			simpleArchiver.move_archive()
 			simpleArchiver.tidyup()
-			print(type(simpleArchiver.testmethod()))
+
 else:
 	sys.exit("Quitting...unable to find file")
